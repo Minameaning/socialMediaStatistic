@@ -1,0 +1,52 @@
+
+.custom-button {
+    -fx-background-color: #42aaf5;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+}
+/* Change color on hover */
+.custom-button:hover {
+    -fx-background-color: #225214;
+}
+
+.chart-title , #table-title{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Tahoma";
+    -fx-padding: 20px;
+    -fx-alignment: center;
+    -fx-text-fill: #6042f5;
+}
+.table-view {
+    -fx-padding: 0;
+}
+
+.custom-table {
+    -fx-control-inner-background: white;
+    -fx-selection-bar-non-focused: #a8d3ff;
+    -fx-selection-bar: #a8d3ff;
+    -fx-font-size: 16px;
+}
+
+.table-view .column-header {
+    -fx-background-color: Violet;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #e0e0e0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #d0d0d0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: hotpink;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.socialmediastatistic.ChartController"
+            fx:id="root">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn text="Rank" fx:id="rankColumn"/>
+                <TableColumn text="Platform" fx:id="platformColumn"/>
+                <TableColumn text="Primary Age Group" fx:id="primaryAgeGroupColumn"/>
+                <TableColumn text="2022" fx:id="percentage2022Column"/>
+                <TableColumn text="2020" fx:id="percentage2020Column"/>
+            </columns>
+        </TableView>
+        <BarChart fx:id="barChart">
+            <xAxis>
+                <CategoryAxis />
+            </xAxis>
+            <yAxis>
+                <NumberAxis />
+            </yAxis>
+        </BarChart>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10 10 10 10;">
+
+        <RadioButton fx:id="showBarChart" text="Bar Chart" onAction="#updateChart" selected="true"/>
+            <RadioButton fx:id="showPieChart2022" text="2022" onAction="#updateChart"/>
+            <RadioButton fx:id="showPieChart2020" text="2020" onAction="#updateChart"/>
+            <Button text="Switch View" onAction="#switchView" styleClass="custom-button"/>
+        </HBox>
+
+    </bottom>
+
+</BorderPane>
